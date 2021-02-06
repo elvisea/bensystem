@@ -1,8 +1,9 @@
-import React, { useState, FormEvent } from 'react';
+// import React, { useState, FormEvent } from 'react';
+import React, { useState } from 'react';
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 import Textarea from '../../components/Textarea';
-import Select from '../../components/Select';
+// import Select from '../../components/Select';
 // import api from '../../services/api';
 import { useHistory } from 'react-router-dom';
 
@@ -26,25 +27,25 @@ function OrcamentoForm() {
         { week_day: 0, from: '', to: '' }
     ]);
 
-    function addNewScheduleItem() {
-        setScheduleItems([
-            ...scheduleItems,
-            { week_day: 0, from: '', to: '' }
-        ]);
-    }
+    // function addNewScheduleItem() {
+    //     setScheduleItems([
+    //         ...scheduleItems,
+    //         { week_day: 0, from: '', to: '' }
+    //     ]);
+    // }
 
-    function setScheduleItemValue(position: number, field: string, value: string) {
-        const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
-            if (index === position) {
-                return { ...scheduleItem, [field]: value }
-            }
+    // function setScheduleItemValue(position: number, field: string, value: string) {
+    //     const updatedScheduleItems = scheduleItems.map((scheduleItem, index) => {
+    //         if (index === position) {
+    //             return { ...scheduleItem, [field]: value }
+    //         }
 
-            return scheduleItem;
+    //         return scheduleItem;
 
-        });
+    //     });
 
-        setScheduleItems(updatedScheduleItems);
-    }
+    //     setScheduleItems(updatedScheduleItems);
+    // }
 
     // function handleCreateClass(e: FormEvent) {
     //     e.preventDefault();
@@ -68,7 +69,7 @@ function OrcamentoForm() {
     return (
         <div id="page-teacher-form" className="container">
             <PageHeader
-                title="Incrível que você chegou até nós! Será um prazer analisar seu orçamento."
+                title="Incrível que você chegou até nós!"
                 description="Preencha seus dados de contato e descrição do serviço que você deseja."
             />
 
